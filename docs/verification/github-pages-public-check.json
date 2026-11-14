@@ -1,0 +1,36 @@
+{
+  "published_url": "https://fnowiia.github.io/VOID_RUNNER/",
+  "checks": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 969,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "assets/index-Cux53aZ6.js",
+      "status": 200,
+      "bytes": 128543,
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "assets/sprites/enemy.png",
+      "status": 200,
+      "bytes": 10682,
+      "type": "image/png"
+    },
+    {
+      "path": "help.html",
+      "status": 200,
+      "bytes": 13254,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "downloads/ERROR404.zip",
+      "status": 200,
+      "bytes": 4666424,
+      "type": "application/x-zip-compressed",
+      "sha256": "a27f4476831fdc8046bab174c2cb6064716850ae901dac85ef0fc87632056f1d"
+    }
+  ]
+}

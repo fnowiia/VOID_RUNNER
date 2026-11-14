@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "url": "https://fnowiia.github.io/VOID_RUNNER/",
+  "state": {
+    "cloudStatus": "cloud",
+    "nickname": "QA GitHub Pages",
+    "level": 1,
+    "patches": 1,
+    "speed": 220,
+    "enemies": 3,
+    "world": 4096
+  },
+  "errors": [],
+  "httpFailures": []
+}
