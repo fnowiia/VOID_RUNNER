@@ -1,0 +1,103 @@
+{
+  "status": "passed",
+  "project_ref": "cqjcpufqenirifdkxukg",
+  "checks": [
+    "Anonymous user 0 can create own profile",
+    "Anonymous user 0 can save own run with six hints",
+    "Repeated run UUID is idempotent for user 0",
+    "Anonymous user 1 can create own profile",
+    "Anonymous user 1 can save own run with six hints",
+    "Repeated run UUID is idempotent for user 1",
+    "User 0 cannot read other user profiles",
+    "User 0 cannot read other user runs",
+    "User 0 reads own run only",
+    "User 1 cannot read other user profiles",
+    "User 1 cannot read other user runs",
+    "User 1 reads own run only",
+    "Cross-user profile update affects no rows",
+    "Other user profile remains unchanged",
+    "Forged owner run insert is rejected by RLS",
+    "Seven hints rejected by database check",
+    "Saved runs deny PATCH",
+    "Saved runs deny DELETE",
+    "Own level progress can be created",
+    "Independent best records preserved (20000, 3, 2)",
+    "Independent best records preserved (10000, 1, 2)",
+    "Progress ownership reassignment is rejected",
+    "Second anonymous user cannot read first progress",
+    "Visitor without session has no access to profiles",
+    "Visitor without session has no access to runs",
+    "Visitor without session has no access to level_progress"
+  ],
+  "check_count": 26,
+  "fixture_user_ids": [
+    "dbe32a10-37b0-4eef-b322-4268b77de367",
+    "609dbd60-0e0b-4140-9ebd-3d7a97576247"
+  ],
+  "fixture_run_ids": [
+    "8c92cff7-7ae8-4f64-b173-4efe37281d9e",
+    "ad792aa2-b74a-44da-a83f-bc96411e31f8"
+  ],
+  "auth": {
+    "provider": "anonymous",
+    "independent_users": 2,
+    "signup_http_statuses": [
+      200,
+      200
+    ],
+    "both_users_anonymous": true
+  },
+  "schema": {
+    "tables": [
+      "profiles",
+      "level_progress",
+      "runs"
+    ],
+    "rls_enabled_on_all_tables": true,
+    "hints_used_min": 0,
+    "hints_used_max": 6
+  },
+  "privileges": {
+    "anon": [],
+    "PUBLIC": [],
+    "authenticated": {
+      "profiles": [
+        "SELECT",
+        "INSERT",
+        "UPDATE"
+      ],
+      "level_progress": [
+        "SELECT",
+        "INSERT",
+        "UPDATE"
+      ],
+      "runs": [
+        "SELECT",
+        "INSERT"
+      ]
+    }
+  },
+  "advisors": {
+    "performance": [],
+    "security": [
+      {
+        "name": "auth_allow_anonymous_sign_ins",
+        "level": "WARN",
+        "tables": [
+          "profiles",
+          "level_progress",
+          "runs"
+        ],
+        "context": "Intended: anonymous authenticated players can access only their own rows; verified with two real anonymous users.",
+        "documentation": "https://supabase.com/docs/guides/database/database-advisors?queryGroups=lint&lint=0012_auth_allow_anonymous_sign_ins"
+      },
+      {
+        "name": "auth_leaked_password_protection",
+        "level": "WARN",
+        "context": "Supabase project default; game uses anonymous sign-in and does not collect passwords.",
+        "documentation": "https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection"
+      }
+    ]
+  },
+  "credential_handling": "Only public publishable API key used. Session tokens were never printed and temporary session file removed after verification."
+}

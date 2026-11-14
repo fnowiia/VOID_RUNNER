@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "method": "real browser Supabase SDK anonymous profile + completion service + reload",
+  "state": {
+    "status": "cloud",
+    "nickname": "QA браузер SDK",
+    "pending": 0,
+    "progress": {
+      "1": {
+        "level_id": 1,
+        "best_time_ms": 180000,
+        "best_errors": 1,
+        "best_stars": 1,
+        "completed_at": "2026-11-14T12:20:19.119+00:00"
+      }
+    },
+    "runs": 1,
+    "message": "Прогресс сохранён в облаке"
+  },
+  "errors": []
+}

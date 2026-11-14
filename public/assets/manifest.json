@@ -1,0 +1,146 @@
+{
+  "license": "Original procedural artwork, included under the project MIT license.",
+  "player": {
+    "frameWidth": 32,
+    "frameHeight": 48,
+    "frames": 20,
+    "animations": {
+      "idle": [
+        0,
+        3
+      ],
+      "run": [
+        4,
+        9
+      ],
+      "jump": [
+        10,
+        11
+      ],
+      "fall": [
+        12,
+        13
+      ],
+      "hurt": [
+        14,
+        15
+      ],
+      "repair": [
+        16,
+        19
+      ]
+    }
+  },
+  "patch": {
+    "frameWidth": 24,
+    "frameHeight": 24,
+    "frames": 20,
+    "animations": {
+      "idle": [
+        0,
+        3
+      ],
+      "float": [
+        4,
+        7
+      ],
+      "talk": [
+        8,
+        11
+      ],
+      "joy": [
+        12,
+        15
+      ],
+      "warning": [
+        16,
+        19
+      ]
+    }
+  },
+  "terminal": {
+    "frameWidth": 32,
+    "frameHeight": 48,
+    "frames": 4
+  },
+  "portal": {
+    "frameWidth": 96,
+    "frameHeight": 128,
+    "frames": 8
+  },
+  "enemy": {
+    "frameWidth": 32,
+    "frameHeight": 32,
+    "frames": 12,
+    "animations": {
+      "crawl": [
+        0,
+        3
+      ],
+      "fly": [
+        4,
+        7
+      ],
+      "rupture": [
+        8,
+        11
+      ]
+    }
+  },
+  "objects": {
+    "frameWidth": 32,
+    "frameHeight": 32,
+    "frames": [
+      "key",
+      "fuse",
+      "leverOff",
+      "leverOn",
+      "checkpoint",
+      "spikes",
+      "laser",
+      "crate",
+      "screen",
+      "cable",
+      "glitch"
+    ]
+  },
+  "tileset": {
+    "frameWidth": 32,
+    "frameHeight": 32,
+    "frames": [
+      "floor",
+      "edge",
+      "wall",
+      "bridge",
+      "trim",
+      "ceiling"
+    ]
+  },
+  "backgrounds": {
+    "width": 960,
+    "height": 540,
+    "count": 5
+  },
+  "icons": {
+    "frameWidth": 16,
+    "frameHeight": 16,
+    "frames": [
+      "error",
+      "success",
+      "info",
+      "settings",
+      "sound",
+      "muted",
+      "starEmpty",
+      "starHalf",
+      "starFull",
+      "loading",
+      "database",
+      "pause",
+      "retry",
+      "fullscreen",
+      "profile",
+      "arrow"
+    ]
+  }
+}

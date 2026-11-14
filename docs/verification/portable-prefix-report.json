@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "base": "http://127.0.0.1:4185/VOID_RUNNER/",
+  "menu": true,
+  "levelCards": 5,
+  "terminal": true,
+  "speed": 220,
+  "helpURL": "http://127.0.0.1:4185/VOID_RUNNER/help.html",
+  "zipURL": "http://127.0.0.1:4185/VOID_RUNNER/downloads/ERROR404.zip",
+  "errors": [],
+  "bad": []
+}

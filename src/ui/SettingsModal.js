@@ -1,0 +1,8 @@
+export class SettingsModal {
+  constructor(ui,onClose) {
+    const s=ui.settings;
+    const layer=ui.modal(`<div class="modal-top"><span>SYSTEM / SETTINGS</span><button class="icon-button" data-close aria-label="Закрыть">×</button></div><h2>Настрой систему.</h2><div class="settings-rows"><label class="setting"><span>Общая громкость <small>Оригинальный звук Web Audio</small></span><input type="range" name="volume" aria-label="Общая громкость" min="0" max="1" step="0.05" value="${s.volume}"></label><label class="setting"><span>Выключить звук</span><input type="checkbox" name="muted" ${s.muted?'checked':''}></label><label class="setting"><span>Меньше эффектов <small>Сокращает вспышки и частицы</small></span><input type="checkbox" name="reducedEffects" ${s.reducedEffects?'checked':''}></label><label class="setting"><span>Показывать управление</span><input type="checkbox" name="showControls" ${s.showControls?'checked':''}></label></div><button class="secondary full-width" data-fullscreen>⛶ ПОЛНОЭКРАННЫЙ РЕЖИМ</button><p class="fine-print">Настройки автоматически сохраняются в этом браузере.</p>`,{onClose});
+    layer.querySelectorAll('input').forEach(input=>input.oninput=()=>{ui.settings[input.name]=input.type==='checkbox'?input.checked:Number(input.value);ui.applySettings();ui.hud?.element.querySelector('.keyboard-help')?.classList.toggle('hidden',!ui.settings.showControls);});
+    layer.querySelector('[data-fullscreen]').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else if(document.documentElement.requestFullscreen)await document.documentElement.requestFullscreen();else ui.toast('Этот браузер не поддерживает полноэкранный режим.');}catch{ui.toast('Браузер не разрешил полноэкранный режим.');}};
+  }
+}

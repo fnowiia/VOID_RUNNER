@@ -1,0 +1,112 @@
+{
+  "passed": true,
+  "method": "Real Phaser physics advanced with keyboard input; no teleportation, forced completion or disabled enemies.",
+  "cloudRequestsIntercepted": true,
+  "puzzles": [
+    "1-main",
+    "1-jump",
+    "1-laser",
+    "2-main",
+    "2-lift",
+    "2-shield",
+    "3-main",
+    "3-route",
+    "3-permission",
+    "4-main",
+    "4-step",
+    "4-power",
+    "5-reactor",
+    "5-checksum",
+    "5-main"
+  ],
+  "report": [
+    {
+      "level": 1,
+      "progress": {
+        "level_id": 1,
+        "best_time_ms": 48517,
+        "best_errors": 1,
+        "best_stars": 2,
+        "completed_at": "2026-11-14T12:26:56.714Z"
+      }
+    },
+    {
+      "level": 2,
+      "progress": {
+        "level_id": 2,
+        "best_time_ms": 50067,
+        "best_errors": 0,
+        "best_stars": 3,
+        "completed_at": "2026-11-14T12:26:58.298Z"
+      }
+    },
+    {
+      "level": 3,
+      "progress": {
+        "level_id": 3,
+        "best_time_ms": 59717,
+        "best_errors": 0,
+        "best_stars": 3,
+        "completed_at": "2026-11-14T12:26:59.384Z"
+      }
+    },
+    {
+      "level": 4,
+      "progress": {
+        "level_id": 4,
+        "best_time_ms": 52633,
+        "best_errors": 0,
+        "best_stars": 3,
+        "completed_at": "2026-11-14T12:27:00.929Z"
+      }
+    },
+    {
+      "level": 5,
+      "progress": {
+        "level_id": 5,
+        "best_time_ms": 54650,
+        "best_errors": 0,
+        "best_stars": 3,
+        "completed_at": "2026-11-14T12:27:02.142Z"
+      }
+    },
+    {
+      "check": "monster full restart",
+      "before": {
+        "state": "dead",
+        "deaths": 1,
+        "items": 1,
+        "patches": [
+          "3-main",
+          "3-route"
+        ]
+      },
+      "after": {
+        "level": 3,
+        "x": 104,
+        "y": 895.9,
+        "vx": 0,
+        "vy": 47,
+        "grounded": false,
+        "state": "playing",
+        "items": 0,
+        "patches": [],
+        "hints": 0,
+        "mistakes": 0,
+        "deaths": 1,
+        "ready": false,
+        "scenes": [
+          "Game"
+        ]
+      },
+      "preservedCompletedLevels": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    }
+  ],
+  "errors": []
+}

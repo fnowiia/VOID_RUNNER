@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "landscape": {
+    "width": 844,
+    "height": 390
+  },
+  "portrait": {
+    "width": 390,
+    "height": 844
+  },
+  "movement": {
+    "from": 104,
+    "to": 230.5460967670856
+  },
+  "canvasClearOfTouchControls": true,
+  "errors": []
+}
